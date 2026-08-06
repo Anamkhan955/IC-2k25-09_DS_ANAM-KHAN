@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+// 1. Create a 2D array with some numbers 
+int matrix[2][3]={{2,3,4},{4,5,6}};
+//2. Start by assuming the first number is the greatest 
+int maxnumber=matrix[0][0];
+//3. Loop through every number to find actual greatest number
+for (int i=0;i<2;i++){
+    for (int j=0;j<3;j++){
+        //4. If the current number is greater than the maxnumber ,update it 
+        if(matrix[i][j]>maxnumber){
+            maxnumber=matrix[i][j];
+            
+        }
+            
+        }
+    }
+cout<<"The greatest number is:"<<maxnumber<<endl;
+return 0;
+
+}
