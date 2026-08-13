@@ -1,0 +1,30 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main() {
+//write C++ code here 
+vector<int> numbers;
+//adding elements to the vector
+numbers.push_back(10);
+numbers.push_back(20);
+numbers.push_back(30);
+numbers.push_back(40);
+cout<<"vector elements :";
+for(int i=0;i<numbers.size();i++){
+cout<<numbers[i]<<"  ";
+}
+cout<<endl;
+
+numbers.push_back(60);
+for(int i=0;i<numbers.size();i++){
+    cout<<numbers[i]<<" ";
+}
+cout<<endl;
+numbers.pop_back();
+for(int i=0;i<numbers.size();i++){
+    cout<<numbers[i]<<" ";
+}
+cout<<endl;
+return 0;
+}
