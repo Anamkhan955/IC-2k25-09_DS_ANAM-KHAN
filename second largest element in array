@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<int>arr={13,45,4,3,56};
+    int largest=-1;
+    int second_largest=-1;
+
+for(int i=0;i<arr.size();i++){
+    int current=arr[i];
+    if(current>largest){
+        second_largest=largest;
+        largest=current;
+    }
+    else if(current>second_largest && current !=largest){
+        second_largest=current;
+    }
+}
+    cout<<"The second largest number is :"<<second_largest;
+    
+    return 0;
+}
+
