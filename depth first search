@@ -1,0 +1,31 @@
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void DFS(int node, vector<int> graph[], bool visited[]) {
+    visited[node] = true;
+    cout << node << " ";
+
+    for (int x : graph[node]) {
+        if (!visited[x]) {
+            DFS(x, graph, visited);
+        }
+    }
+}
+
+int main() {
+    int V = 4;
+    vector<int> graph[4];
+
+    graph[0] = {1, 2};
+    graph[1] = {0, 3};
+    graph[2] = {0};
+    graph[3] = {1};
+
+    bool visited[10] = {false};
+
+    DFS(0, graph, visited);
+
+    return 0;
+}
